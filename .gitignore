@@ -1,0 +1,19 @@
+
+# ignore cache files
+*.py[co]
+__pycache__/
+
+# ignore log files
+*.log
+
+# ignore virtualenv directory
+venv/
+
+# ignore spyder project files
+.spyderproject
+
+# ignore komodo project files
+*.komodoproject
+
+# ignore project specific files/directories
+*.csv
