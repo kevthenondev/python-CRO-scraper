@@ -30,8 +30,6 @@ import lxml.html
 
 
 CRO_URL = 'https://search.cro.ie/company/CompanySearch.aspx'
-INITIAL_PAGE_NUMBER = 1
-MAX_PAGE_NUMBER = 15
 
 class UnknownUserException(Exception):
     pass
@@ -85,11 +83,9 @@ def collect_conames(filepath):
     return conames
         
 
-click.group()
+@click.group()
 def cli():
-
     pass
-
 
 
 @click.command()
@@ -170,12 +166,7 @@ def crawlcro(browser, infile, outfile):
                     click.echo("No results")
                     continue
 
-
-
-
 cli.add_command(crawlcro)
-
-
 
 if __name__ == '__main__':
     cli()
